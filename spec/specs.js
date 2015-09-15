@@ -15,4 +15,12 @@ describe('pigLatin', function() {
   it("is adding ay to the end if word starts with a vowel", function() {
     expect(consonantModifier("orange")).to.equal("orangeay");
   });
+
+  it("is returning index of a consonant", function() {
+    expect(consonantChecker("brake")).to.equal("a");
+  })
+
+  // it("is moving two first letter to the end of word if word starts with two consonant letters", function() {
+  //   expect(consonantChecker("crack")).to.equal("ackcray");
+  // });
 });
