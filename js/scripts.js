@@ -57,3 +57,15 @@ var pigLatin = function(userWord) {
     return consonantMover(userWord);
   }
 }
+
+$(document).ready(function() {
+  $("form#pig-latin").submit(function(event) {
+    var userWord = $("input#user-word").val();
+    var result = pigLatin(userWord);
+
+    $(".transformed-word").text(result);
+    $("#result").show();
+
+    event.preventDefault();
+  });
+});
