@@ -17,7 +17,6 @@ var consonantChecker = function(userWord) {
 }
 
 var consonantMover = function(userWord) {
-  debugger;
   if (!vowelChecker(userWord)) {
     var index = consonantChecker(userWord);
     finalWord = userWord.slice(index) + userWord.slice(0, index);
@@ -25,4 +24,14 @@ var consonantMover = function(userWord) {
     var finalWord = userWord;
   }
   return finalWord += "ay";
+}
+
+var quChecker = function(userWord) {
+  var index = consonantChecker(userWord);
+  var newWord = userWord.slice(0, index + 1);
+    if (newWord.indexOf("qu") > -1) {
+      return true;
+    } else {
+      return false;
+    }
 }

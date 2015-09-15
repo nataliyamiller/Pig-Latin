@@ -35,3 +35,9 @@ describe('consonantMover', function() {
     expect(consonantMover("scratch")).to.equal("atchscray");
   });
 });
+
+describe('quChecker', function() {
+  it("is recognizing the qu letters at the beginning of the word if the word starts with a consonant", function() {
+    expect(quChecker("squshel")).to.equal(true);
+  });
+});
