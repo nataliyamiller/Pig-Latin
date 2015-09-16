@@ -48,7 +48,7 @@ var quMover = function(userWord) {
   }
 }
 
-var pigLatin = function(userWord) {
+var pigLatinWord = function(userWord) {
   if(vowelChecker(userWord) || yChecker(userWord)) {
     return vowelMover(userWord);
   } else if (quChecker(userWord)) {
@@ -57,6 +57,16 @@ var pigLatin = function(userWord) {
     return consonantMover(userWord);
   }
 }
+
+var pigLatin = function(userString) {
+  var strings = userString.split(" ");
+  var finalString = "";
+  strings.forEach(function(string) {
+    finalString += pigLatinWord(string) + " ";
+  });
+  return finalString.trim();
+}
+
 
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {

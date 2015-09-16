@@ -65,24 +65,30 @@ describe('quMover', function() {
   });
 });
 
-describe('pigLatin', function() {
+describe('pigLatinWord', function() {
   it("is adding ay to the end of the word if the word starts with a vowel", function() {
-    expect(pigLatin("orange")).to.equal("orangeay");
+    expect(pigLatinWord("orange")).to.equal("orangeay");
   });
 
   it("is moving first letter to the end of word if word doesn't start with a vowel", function() {
-    expect(pigLatin("mother")).to.equal("othermay");
+    expect(pigLatinWord("mother")).to.equal("othermay");
   });
 
   it("is recognizing the qu substring at the beginning of word and moves qu to the end", function() {
-    expect(pigLatin("squshel")).to.equal("shelsquay");
+    expect(pigLatinWord("squshel")).to.equal("shelsquay");
   });
 
   it("is recognizing the qu substring at the start of word and moves qu to the end", function() {
-    expect(pigLatin("quarter")).to.equal("arterquay");
+    expect(pigLatinWord("quarter")).to.equal("arterquay");
   });
 
   it("is not moving y to the end of the word if the word starts with y", function() {
-    expect(pigLatin("yaaay")).to.equal("yaaayay");
+    expect(pigLatinWord("yaaay")).to.equal("yaaayay");
+  });
+});
+
+describe('pigLatin', function() {
+  it("is changing all words in a string to pig latin", function() {
+    expect(pigLatin("hello cat yaaay")).to.equal("ellohay atcay yaaayay");
   });
 });
