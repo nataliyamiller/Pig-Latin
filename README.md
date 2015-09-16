@@ -7,7 +7,7 @@
 
 ### Description
 
-_This application transforms user's string input into a Pig Latin mystery :-)
+* This application transforms user's string input into a Pig Latin mystery :-)
 
 
 ## Setup
@@ -34,5 +34,4 @@ _This application transforms user's string input into a Pig Latin mystery :-)
 
 Copyright (c) 2015 **Nataliya Bareeva-Miller**
 
-## Copyright (c) 2015 Copyright Holder All Rights Reserved.
-[MIT License 2015] https://github.com/nataliyamiller/basic-template-for-java-projects/blob/master/LICENSE.md
+This software is licensed under the [MIT License](https://github.com/nataliyamiller/basic-template-for-java-projects/blob/master/LICENSE.md)
